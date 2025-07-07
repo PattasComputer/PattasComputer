@@ -23,6 +23,7 @@
     width: 100%;
     padding: 25px 0 25px 0;
     position: absolute;
+    z-index: 9999;
 }
 
 .navbar .navbar-box {
@@ -56,10 +57,9 @@
 }
 
 .navbar .navbar-box .menu li a {
-    color: var(--color-putih);
+    color: var(--text-color-opacity);
     text-decoration: none;
     font-size: 14px;
-    background-color: var(--color);
 }
 
 .navbar .navbar-box .social {
@@ -72,12 +72,8 @@
     text-decoration: none;
 }
 
-.navbar .navbar-box .social a i {
-    color: var(--color-putih);
-}
-
-.navbar .navbar-box .social li a :hover,
-.navbar .navbar-box .social li a :hover {
+.navbar .navbar-box .menu li a:hover,
+.navbar .navbar-box .social li a:hover {
     color: var(--text-color);
 }
 
@@ -101,15 +97,17 @@
 }
 
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-    background-color: #ffff;
+    background-color: #ffff;
 }
+
+
+/* todo Header  */
 
 .header {
     width: 100%;
     min-height: 100vh;
     background-color: #660000;
     opacity: 1;
-
 }
 
 .header .header-box {
@@ -132,6 +130,7 @@
     color: var(--color-putih);
     font-weight: 300;
     margin-bottom: 200px;
+    font-weight: 300px;
 }
 
 .header .header-box a {
@@ -199,6 +198,8 @@
     transform: rotate(-90deg);
 }
 
+/* todo About  */
+
 .about {
     width: 100%;
     min-height: 100vh;
@@ -218,8 +219,6 @@
 .about .title p {
     color: var(--text-color-opacity);
     font-size: 18px;
-    /* color: (0, 0, 0, 0.373); */
-
 }
 
 .about .about-box {
@@ -229,11 +228,56 @@
     justify-content: center;
 }
 
-.about .about-box .box:nth-child(1) img {
+/* ? slider  */
+
+.about .about-box .box .slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.about .about-box .box .slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about .about-box .box .slider img:first-child {
+    z-index: 1;
+}
+
+.about .about-box .box .slider img:nth-child(2) {
+    z-index: 0;
+}
+
+.about .about-box .box .navigation-button {
+    text-align: center;
+    position: relative;
+}
+
+.about .about-box .box .navigation-button .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.about .about-box .box .navigation-button .dot.active, .about .about-box .box .navigation-button .dot:hover {
+    background-color: var(--color-hitam);
+}
+
+/* ? slider  */
+
+/* .about .about-box .box:nth-child(1) img {
     width: 100%;
     border-radius: 50px;
 
-}
+} */
 
 .about .about-box .box:nth-child(2) {
     padding-left: 100px;
@@ -249,6 +293,8 @@
     font-size: 14px;
     
 }
+
+/* todo about  */
 
 /* todo Division */
 
@@ -539,6 +585,73 @@
 
 /* todo Footer  */
 
+/* todo responsive  */
+
+@media screen and (max-width:1200px) {
+    .header .header-box img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header .header-box h1 {
+        font-size: 25px;
+    }
+    
+    .header .header-box h2 {
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
+    .header .header-box a {
+        font-size: 15px;
+    }
+
+    .header-info div {
+        font-size: 15px;
+    }
+
+    .header-info i {
+        font-size: 25px;
+    }
+
+    .header-info.info1 {
+        left: 100px;
+    }
+
+    .header-info.info2 {
+        top: 450px;
+        left: 100px;
+    }
+
+    .header-info.info3 {
+        right: 120px;
+    }
+
+    .header-info.info4 {
+        top: 450px;
+        right: 120px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .about .about-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* todo about  */
+    .about .title h1 {
+        font-size: 25px;
+    }
+
+    .about .title p {
+        font-size: 16px;
+    }
+    
+}
+
 @media screen and (max-width:768px){
     .hamburger {
         display: block;
@@ -549,7 +662,7 @@
         flex-direction: column;
         top: 100px;
         gap: 0;
-        background-color: var(--color-hitam);
+        background-color: var(--color-putih);
         width: 80%;
         transform: scaleY(0);
         transform-origin: top;
@@ -578,7 +691,37 @@
     }
 
     .navbar .navbar-box .social {
-        margin-left: auto;
+        margin-left: auto;
     }
+
+    .header .header-info {
+        display: none;
+    }
+
 }
 
+@media screen and (max-width: 475px) {
+
+    .header .header-box h1 {
+        font-size: 20px;
+    }
+
+    .header .header-box h2 {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+    .header .header-box a {
+        font-size: 12px;
+    }
+
+    /* todo about  */
+    .about .title h1 {
+        font-size: 20px;
+    }
+
+    .about .title p {
+        font-size: 14px;
+    }
+    
+}

@@ -31,12 +31,10 @@
                     <p>PC</p>
                 </div>
                 <ul class="menu">
-                    
                         <li><a href="">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">DIVISION</a></li>
                         <li><a href="">PROJECT</a></li>
-
                 </ul>
                 <div class="social">
                     <a href="">
@@ -62,8 +60,8 @@
             <div class="header-box">
                 <img src="assets/logo-icon/logopc.jpg" alt="foto-profil" class="animate__animated animate__fadeInUp animate__delay-1s">
                 <h1 class="animate__animated animate__fadeInUp animate__delay-1s">PATAS COMPUTER</h1>
-                <h2 class="animate__animated animate__fadeInUp animate__delay-1s">"Seni Menantang Teknologi Dan Teknologi Menginspirasi Seni" <br>JOHN LASSETER<br></h2>   
-                <a href="#about" class="animate__animated animate__fadeInUp animate__delay-1s">Details About PATAS COMPUTER</a>
+                <h2 class="animate__animated animate__fadeInUp animate__delay-1s">"Seni Menantang Teknologi Dan Teknologi Menginspirasi Seni" <br>JOHN LASSETER</h2>   
+                <a href="#about" class="animate__animated animate__fadeInUp animate__delay-1s">Details About Us</a>
             </div>
             <!-- <div class="header-box">
             </div> -->
@@ -89,12 +87,21 @@
      <div class="about" id="about">
         <div class="container">
             <div class="title">
-                <h1 data-aos="fade-up" data-aos-duration="500">About PATAS COMPUTER</h1>
-                <p data-aos="fade-up" data-aos-duration="500">Yuk Kenal Lebih Dalam Dengan PC</p>
+                <h1 >About PATAS COMPUTER</h1>
+                <p>Yuk Kenal Lebih Dalam Dengan PC</p>
             </div>
             <div class="about-box">
                 <div class="box">
-                    <img src="assets/images/fotbar-pc.jpg" alt="about-img" data-aos="fade-up" data-aos-duration="500">
+                    <div class="slider">
+                        <img id="img-1" src="assets/images/fotbar-pc.jpg" alt="about-img">
+                        <img id="img-2" src="assets/images/anomali.JPG" alt="about-img">
+                        <img id="img-3" src="assets/images/anomali2.JPG" alt="about-img">
+                    </div>
+                    <div class="navigation-button">
+                        <span class="dot active" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                    </div>
                 </div>
                 <div class="box" data-aos="fade-up" data-aos-duration="500">
                     <h1>PATAS COMPUTER</h1>
@@ -227,5 +234,8 @@
         </div>
       </div>
      <!-- Footer -->
+
+     <!-- js -->
+     <script src="dist/js/script.js"></script>
 </body>
 </html>
