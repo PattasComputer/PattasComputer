@@ -10,7 +10,7 @@
     --color-putih: #ffff;
     --color-ungu: #8685ef;
     --text-color: #ffff;
-    --text-color-opacity:#ffffff6e;
+    --text-color-opacity:#a2a2a2b2;
 }
 
 .container {
@@ -130,18 +130,21 @@
 
 .header .header-box h2 {
     color: var(--color-putih);
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: 200px;
 }
 
 .header .header-box a {
     padding: 15px 25px 15px 25px;
-    background-color: #3f4451;
+    background-color: var(--text-color-opacity);
     color: var(--color-putih);
-    border-radius: 200px;
+    border-radius: 10px;
     font-weight: 500;
-    border: none;
-    
+    text-decoration: none;
+}
+
+.header .header-box a:hover {
+    background-color: #bd5f3f74;
 }
 
 .header-info {
@@ -152,7 +155,7 @@
 }
 
 .header-info div {
-    background-color: #3f4451;
+    background-color: #fff38766;
     padding: 10px 15px 10px 15px;
     border-radius: 55px;
     font-size: 20px;
@@ -165,32 +168,26 @@
     color: var(--text-color-opacity);
 }
 
-.header-info.info1 i {
-    transform: rotate(90deg);
-}
-
 .header-info.info1 {
     top: 250px;
     left: 220px;
 }
 
+.header-info.info1 i {
+    transform: rotate(90deg);
+}
 
 .header-info.info2 {
     top: 550px;
     left: 220px;
 }
 
-.header-info.info3 i {
-    transform: rotate(-180deg);
-}
-
-.header-info.info4 i {
-    transform: rotate(-90deg);
-}
-
 .header-info.info3 {
     top: 250px;
     right: 220px;
+}
+.header-info.info3 i {
+    transform: rotate(-180deg);
 }
 
 .header-info.info4 {
@@ -198,10 +195,15 @@
     right: 210px;
 }
 
+.header-info.info4 i {
+    transform: rotate(-90deg);
+}
+
 .about {
     width: 100%;
     min-height: 100vh;
     padding: 150px 0 150px 0;
+    /* background-color: var(--color-hitam); */
 }
 
 .about .title {
@@ -211,11 +213,13 @@
 
 .about .title h1 {
     font-size: 35px;
-    color: #ffff;
 }
 
 .about .title p {
-    color: #ffff;
+    color: var(--text-color-opacity);
+    font-size: 18px;
+    /* color: (0, 0, 0, 0.373); */
+
 }
 
 .about .about-box {
@@ -235,23 +239,230 @@
     padding-left: 100px;
 }
 
-.about .about-box .box:nth-child(2) h1 {
-    margin-bottom: 10px;
-    color: #ffff;    
-}
-
 .about .about-box .ability {
     margin-bottom: 20px;
     font-size: 14px;
-    color: #ffff;
+    color: var(--text-color-opacity);
 }
 
 .about .about-box .desc {
-    color: #ffff;
     font-size: 14px;
     
 }
 
+/* todo Division */
+
+.division {
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 0 150px 0;
+    background-color: #660000;
+}
+
+.division .title {
+    text-align: center;
+    padding-bottom: 50px;
+    color: var(--text-color);
+}
+
+.division .division-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+/* ? divisi photo */
+
+.division .division-box .photography-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.division .division-box .photography-box .box {
+    width: 450px;
+}
+
+.division .division-box .photography-box .box h3 {
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.division .division-box .photography-box .box img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.division .division-box .photography-box .box p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ? divisi film */
+
+.division .division-box .film-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.division .division-box .film-box .box {
+    width: 450px;
+}
+
+.division .division-box .film-box .box h3 {
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.division .division-box .film-box .box img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.division .division-box .film-box .box p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ? divisi design */
+.division .division-box .design-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.division .division-box .design-box .box {
+    width: 450px;
+}
+
+.division .division-box .design-box .box h3 {
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.division .division-box .design-box .box img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.division .division-box .design-box .box p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ? divisi programming */
+
+.division .division-box .programming-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.division .division-box .programming-box .box {
+    width: 450px;
+}
+
+.division .division-box .programming-box .box h3 {
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.division .division-box .programming-box .box img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.division .division-box .programming-box .box p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* todo Division */
+
+/* todo Projects */
+
+.projects {
+    padding: 150px 0 150px 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.projects .title {
+    text-align: center;
+    padding-bottom: 50px ;
+}
+
+.projects .title h1 {
+    padding-bottom: 10px;
+}
+
+.projects .title p {
+    color: var(--text-color-opacity);
+}
+
+.projects .projects-box {
+    display: flex;
+}
+
+.projects .projects-box .box {
+    width: 450px;
+    margin-right: 50px;
+}
+
+.projects .projects-box .box img {
+    width: 100%;
+}
+
+.projects .projects-box .box .desc {
+    color: var(--text-color-opacity);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* todo Projects */
+
+/* todo Join  */
+.join {
+    padding: 150px 0 150px 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.join .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.join .title p {
+    color: var(--text-color-opacity);
+}
+
+.join .join-box .box {
+    text-align: center;
+    
+}
+
+.join .join-box .box img {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 30px;
+}
+
+.join .join-box .box a {
+    padding: 15px 25px 15px 25px;
+    text-decoration: none;
+    background-color: #660000;
+    color: var(--color-putih);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    /* width: 20%; */
+}
+
+/* todo Join  */
 
 @media screen and (max-width:768px){
     .hamburger {
