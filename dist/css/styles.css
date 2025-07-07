@@ -462,7 +462,82 @@
     /* width: 20%; */
 }
 
+.join .join-box .box a:hover{
+    background-color: #660000c6;
+}
+
 /* todo Join  */
+
+/* todo Footer  */
+
+.footer {
+    width: 100%;
+    padding: 100px 0 100px 0;
+    background-color: var(--color-hitam);
+}
+
+.footer .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer .footer-box .box:nth-child(1) {
+    width: 400px;
+}
+
+.footer .footer-box .box:nth-child(1) h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.footer .footer-box .box:nth-child(1) p {
+    color: var(--text-color);
+}
+
+.footer .footer-box .box:nth-child(2) {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .footer-box .box:nth-child(2) h3 {
+    color: var(--text-color);
+}
+
+.footer .footer-box .box:nth-child(2) a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer .footer-box .box:nth-child(2) a:hover{
+    color: var(--text-color-opacity);
+}
+
+.footer .footer-box .box:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .footer-box .box:nth-child(3) h3 {
+    color: var(--text-color);
+}
+
+.footer .footer-box .box:nth-child(3) a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer .footer-box .box:nth-child(3) a:hover{
+    color: var(--text-color-opacity);
+}
+
+
+
+/* todo Footer  */
 
 @media screen and (max-width:768px){
     .hamburger {
