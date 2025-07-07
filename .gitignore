@@ -1,0 +1,5 @@
+# Sistem file macOS
+.DS_Store
+
+# Folder konfigurasi editor
+.vscode/
