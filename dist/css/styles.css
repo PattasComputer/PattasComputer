@@ -237,7 +237,7 @@
 }
 
 .about .about-box .box .slider img {
-    width: 100%;
+    width: 105%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -294,6 +294,31 @@
     
 }
 
+.about .about-box .box a{
+    padding: 15px 25px 15px 25px;
+    background-color: #3f4451;
+    color: var(--color-putih);
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about .about-box .box a:hover{
+    background-color: #bd5f3f74;
+}
+
+.about .about-box .box .desc span {
+    font-weight: 600;
+    display: inline-block;
+}
+
+
 /* todo about  */
 
 /* todo Division */
@@ -343,6 +368,7 @@
 .division .division-box .photography-box .box p {
     font-size: 14px;
     color: var(--text-color);
+    text-align: justify;
 }
 
 /* ? divisi film */
@@ -370,6 +396,7 @@
 .division .division-box .film-box .box p {
     font-size: 14px;
     color: var(--text-color);
+    text-align: justify;
 }
 
 /* ? divisi design */
@@ -396,6 +423,7 @@
 .division .division-box .design-box .box p {
     font-size: 14px;
     color: var(--text-color);
+    text-align: justify;
 }
 
 /* ? divisi programming */
@@ -423,6 +451,7 @@
 .division .division-box .programming-box .box p {
     font-size: 14px;
     color: var(--text-color);
+    text-align: justify;
 }
 
 /* todo Division */
