@@ -341,8 +341,11 @@
 .division .division-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
+}
+
+.division .division-box .column-box {
+    flex: 50%;
+    padding: 0 5px;
 }
 
 /* ? divisi photo */
@@ -350,7 +353,9 @@
 .division .division-box .photography-box {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    /* width: 500px; */
+    vertical-align: middle;
+    padding-bottom: 20px;
 }
 
 .division .division-box .photography-box .box {
@@ -368,7 +373,6 @@
 }
 
 .division .division-box .photography-box .box p {
-    /* font-size: 14px; */
     font-weight: 300;
     color: var(--text-color);
     text-align: justify;
@@ -379,7 +383,9 @@
 .division .division-box .film-box {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    /* width: 500px; */
+    vertical-align: middle;
+    padding-bottom: 20px;
 }
 
 .division .division-box .film-box .box {
@@ -397,7 +403,6 @@
 }
 
 .division .division-box .film-box .box p {
-    /* font-size: 14px; */
     font-weight: 300;
     color: var(--text-color);
     text-align: justify;
@@ -407,7 +412,9 @@
 .division .division-box .design-box {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    /* width: 500px; */
+    vertical-align: middle;
+    padding-bottom: 20px;
 }
 
 .division .division-box .design-box .box {
@@ -439,7 +446,9 @@
 .division .division-box .programming-box {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    /* width: 500px; */
+    vertical-align: middle;
+    padding-bottom: 20px;
 }
 
 .division .division-box .programming-box .box {
@@ -761,8 +770,10 @@
     }
 
     /* todo division  */
-
-
+    .division .division-box .column-box {
+    flex: 100%;
+    padding: 0 5px;
+    }
 
 }
 
@@ -815,6 +826,7 @@
         font-size: 14px;
     }
 
+
     .division .division-box .photography-box .box h3 {
         font-size: 16px;
     }
@@ -846,4 +858,5 @@
     .division .division-box .programming-box .box p {
         font-size: 14px;
     }
+
 }
