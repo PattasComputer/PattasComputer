@@ -11,6 +11,7 @@
     --color-ungu: #8685ef;
     --text-color: #ffff;
     --text-color-opacity:#b2b2b2c3;
+    --background-merah: #660000;
 }
 
 .container {
@@ -290,7 +291,7 @@
 
 .about .about-box .box:nth-child(2) a{
     padding: 15px 25px 15px 25px;
-    background-color: #3f4451;
+    background-color: var(--background-merah);
     color: var(--color-putih);
     border-radius: 10px;
     font-weight: 500;
@@ -498,25 +499,110 @@
 }
 
 .projects .projects-box {
-    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
 }
 
-.projects .projects-box .card-box {
-    width: 450px;
-    margin-right: 50px;
+.projects .projects-box i {
+    height: 50px;
+    width: 50px;
     background-color: #660000;
+    color: var(--text-color);
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 100px;
+    top: 50%;
+    font-size: 1.25 rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.projects .projects-box .card-box img {
+.projects .projects-box i:first-child {
+    left: -22px;
+}
+
+.projects .projects-box i:last-child {
+    right: -22px;
+}
+
+.projects .projects-box .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.projects .projects-box .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.projects .projects-box .carousel:where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .projects-box .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.projects .projects-box .carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.projects .projects-box .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.projects .projects-box .carousel .card {
+    scroll-snap-align: start;
+    height: 400px;
+    width: 300px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projects .projects-box .carousel .card .image {
     width: 100%;
 }
 
-.projects .projects-box .card-box .desc {
-    color: var(--text-color-opacity);
-    font-size: 14px;
-    margin-bottom: 10px;
+
+.projects .projects-box .carousel .card .image img {
+    width: 100%;
+    object-fit: cover;
 }
 
+.projects .projects-box .carousel .card h2 {
+    font-weight: 500;
+    margin: 30px 0 5px;
+}
+
+.projects .projects-box .carousel .card .info {
+    color: #6a6d78;
+    font-size: 14px;
+}
+
+.projects .projects-box .carousel .card .description {
+    font-size: 14px;
+
+}
 
 /* todo Projects */
 
@@ -559,7 +645,7 @@
 }
 
 .join .join-box .box a:hover{
-    background-color: #660000c6;
+    background-color: #bd5f3f74;
 }
 
 /* todo Join  */
@@ -714,6 +800,12 @@
         font-size: 16px;
     }
 
+    /*  todo Projects  */
+
+    .projects .projects-box .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
     
 }
 
@@ -773,6 +865,12 @@
     .division .division-box .column-box {
     flex: 100%;
     padding: 0 5px;
+    }
+
+     /*  todo Projects  */
+
+    .projects .projects-box .carousel {
+        grid-auto-columns: 100%;
     }
 
 }
