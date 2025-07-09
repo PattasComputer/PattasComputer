@@ -10,7 +10,7 @@
     --color-putih: #ffff;
     --color-ungu: #8685ef;
     --text-color: #ffff;
-    --text-color-opacity:#a2a2a2b2;
+    --text-color-opacity:#b2b2b2c3;
 }
 
 .container {
@@ -212,12 +212,11 @@
 }
 
 .about .title h1 {
-    font-size: 35px;
+    color: var(--color-hitam);
 }
 
 .about .title p {
     color: var(--text-color-opacity);
-    font-size: 18px;
 }
 
 .about .about-box {
@@ -328,7 +327,15 @@
 .division .title {
     text-align: center;
     padding-bottom: 50px;
+}
+
+.division .title h1 {
     color: var(--text-color);
+}
+
+.division .title p {
+    color: var(--text-color-opacity);
+
 }
 
 .division .division-box {
@@ -485,16 +492,17 @@
     display: flex;
 }
 
-.projects .projects-box .box {
+.projects .projects-box .card-box {
     width: 450px;
     margin-right: 50px;
+    background-color: #660000;
 }
 
-.projects .projects-box .box img {
+.projects .projects-box .card-box img {
     width: 100%;
 }
 
-.projects .projects-box .box .desc {
+.projects .projects-box .card-box .desc {
     color: var(--text-color-opacity);
     font-size: 14px;
     margin-bottom: 10px;
@@ -686,7 +694,16 @@
     .about .about-box .box:nth-child(2) h1 {
         font-size: 25px;
     }
-    /* todo about  */
+
+    /* todo Division  */
+
+    .division .title h1 {
+        font-size: 25px;
+    }
+
+    .division .division-box .photography-box .box h3 {
+        font-size: 16px;
+    }
 
     
 }
@@ -743,7 +760,9 @@
     padding-left: 0;
     }
 
-    /* todo About  */
+    /* todo division  */
+
+
 
 }
 
@@ -754,12 +773,12 @@
     }
 
     .header .header-box h2 {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 50px;
     }
 
     .header .header-box a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     /* todo about  */
@@ -786,6 +805,45 @@
         font-size: 14px;
     }
 
-    /* todo about  */
+    /* todo Divisi  */
+
+    .division .title h1 {
+        font-size: 20px;
+    }
     
+    .division .title p {
+        font-size: 14px;
+    }
+
+    .division .division-box .photography-box .box h3 {
+        font-size: 16px;
+    }
+
+    .division .division-box .photography-box .box p {
+        font-size: 14px;
+    }
+
+    .division .division-box .film-box .box h3 {
+        font-size: 16px;
+    }
+
+    .division .division-box .film-box .box p {
+        font-size: 14px;
+    }
+
+    .division .division-box .design-box .box h3 {
+        font-size: 16px;
+    }
+
+    .division .division-box .design-box .box p {
+        font-size: 14px;
+    }
+    
+    .division .division-box .programming-box .box h3 {
+        font-size: 16px;
+    }
+
+    .division .division-box .programming-box .box p {
+        font-size: 14px;
+    }
 }
