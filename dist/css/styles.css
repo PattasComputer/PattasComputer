@@ -204,7 +204,6 @@
     width: 100%;
     min-height: 100vh;
     padding: 150px 0 150px 0;
-    /* background-color: var(--color-hitam); */
 }
 
 .about .title {
@@ -237,11 +236,13 @@
 }
 
 .about .about-box .box .slider img {
-    width: 105%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
 .about .about-box .box .slider img:first-child {
@@ -273,28 +274,22 @@
 
 /* ? slider  */
 
-/* .about .about-box .box:nth-child(1) img {
-    width: 100%;
-    border-radius: 50px;
-
-} */
-
 .about .about-box .box:nth-child(2) {
-    padding-left: 100px;
+    padding-left: 50px;
 }
 
-.about .about-box .ability {
-    margin-bottom: 20px;
+.about .about-box .box:nth-child(2) .ability {
+    margin-bottom: 15px;
     font-size: 14px;
     color: var(--text-color-opacity);
 }
 
-.about .about-box .desc {
+.about .about-box .box:nth-child(2) .desc {
     font-size: 14px;
-    
+    margin-top: 15px;    
 }
 
-.about .about-box .box a{
+.about .about-box .box:nth-child(2) a{
     padding: 15px 25px 15px 25px;
     background-color: #3f4451;
     color: var(--color-putih);
@@ -309,11 +304,11 @@
     margin-top: 40px;
 }
 
-.about .about-box .box a:hover{
+.about .about-box .box:nth-child(2) a:hover{
     background-color: #bd5f3f74;
 }
 
-.about .about-box .box .desc span {
+.about .about-box .box:nth-child(2) .desc span {
     font-weight: 600;
     display: inline-block;
 }
@@ -348,11 +343,11 @@
 .division .division-box .photography-box {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    width: 500px;
 }
 
 .division .division-box .photography-box .box {
-    width: 450px;
+    width: 100%;
 }
 
 .division .division-box .photography-box .box h3 {
@@ -366,7 +361,8 @@
 }
 
 .division .division-box .photography-box .box p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-weight: 300;
     color: var(--text-color);
     text-align: justify;
 }
@@ -376,11 +372,11 @@
 .division .division-box .film-box {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    width: 500px;
 }
 
 .division .division-box .film-box .box {
-    width: 450px;
+    width: 100%;
 }
 
 .division .division-box .film-box .box h3 {
@@ -394,7 +390,8 @@
 }
 
 .division .division-box .film-box .box p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-weight: 300;
     color: var(--text-color);
     text-align: justify;
 }
@@ -403,11 +400,11 @@
 .division .division-box .design-box {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    width: 500px;
 }
 
 .division .division-box .design-box .box {
-    width: 450px;
+    width: 100%;
 }
 
 .division .division-box .design-box .box h3 {
@@ -417,11 +414,15 @@
 
 .division .division-box .design-box .box img {
     width: 100%;
+    position: relative;
     margin-bottom: 5px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .division .division-box .design-box .box p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-weight: 300;
     color: var(--text-color);
     text-align: justify;
 }
@@ -431,11 +432,11 @@
 .division .division-box .programming-box {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    width: 500px;
 }
 
 .division .division-box .programming-box .box {
-    width: 450px;
+    width: 100%;
 }
 
 .division .division-box .programming-box .box h3 {
@@ -446,10 +447,13 @@
 .division .division-box .programming-box .box img {
     width: 100%;
     margin-bottom: 5px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .division .division-box .programming-box .box p {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-weight: 300;
     color: var(--text-color);
     text-align: justify;
 }
@@ -678,6 +682,12 @@
     .about .title p {
         font-size: 16px;
     }
+
+    .about .about-box .box:nth-child(2) h1 {
+        font-size: 25px;
+    }
+    /* todo about  */
+
     
 }
 
@@ -727,6 +737,14 @@
         display: none;
     }
 
+    /* todo About  */
+
+    .about .about-box .box:nth-child(2) {
+    padding-left: 0;
+    }
+
+    /* todo About  */
+
 }
 
 @media screen and (max-width: 475px) {
@@ -752,5 +770,22 @@
     .about .title p {
         font-size: 14px;
     }
+
+    .about .about-box .box:nth-child(2) h1 {
+        font-size: 20px;
+    }
+
+    .about .about-box .box:nth-child(2) p {
+        font-size: 14px;
+    }
+
+    .about .about-box .box:nth-child(2) .desc {
+        font-size: 12px;
+    }
+    .about .about-box .box:nth-child(2) a {
+        font-size: 14px;
+    }
+
+    /* todo about  */
     
 }
