@@ -346,7 +346,7 @@
 
 .division .division-box .column-box {
     flex: 50%;
-    padding: 0 5px;
+    padding: 0 15px;
 }
 
 /* ? divisi photo */
@@ -543,7 +543,7 @@
     display: none;
 }
 
-.projects .projects-box .carousel:where(.card, .img) {
+.projects .projects-box .carousel:where(.card, .image) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -610,7 +610,7 @@
 .join {
     padding: 150px 0 150px 0;
     width: 100%;
-    min-height: 100vh;
+    background-color: var(--background-merah);
 }
 
 .join .title {
@@ -618,33 +618,95 @@
     margin-bottom: 50px;
 }
 
+.join .title h1 {
+    color: var(--text-color);
+}
+
 .join .title p {
     color: var(--text-color-opacity);
 }
 
-.join .join-box .box {
-    text-align: center;
+.join .join-box .box:nth-child(1) {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.join .join-box .box:nth-child(1) .column-join {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 5px;
     
 }
 
-.join .join-box .box img {
-    width: 100%;
-    height: 500px;
-    padding-bottom: 30px;
+.join .join-box .box:nth-child(1) .column-join .inner {
+    display: flex;
+    flex-direction: column;
 }
 
-.join .join-box .box a {
+.join .join-box .box:nth-child(1) .column-join img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    object-fit: cover;
+}
+
+.scroll-up .inner {
+    animation: scrollUp 30s linear infinite;
+}
+.scroll-down .inner {
+  animation: scrollDown 30s linear infinite;
+}
+
+
+
+
+/* ? scroll  */
+
+#kol1 {
+    animation-name: scrollUp 20s linear infinite;
+}
+
+#kol2 {
+    animation-name: scrollDown 20s linear infinite;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+/* ? scroll  */
+
+.join .join-box .box:nth-child(2) {
+    text-align: center;
+}
+
+.join .join-box .box:nth-child(2) a {
     padding: 15px 25px 15px 25px;
     text-decoration: none;
-    background-color: #660000;
+    background-color: var(--text-color-opacity);
     color: var(--color-putih);
     font-size: 20px;
     text-align: center;
     border-radius: 15px;
-    /* width: 20%; */
 }
 
-.join .join-box .box a:hover{
+.join .join-box .box:nth-child(2) a:hover{
     background-color: #bd5f3f74;
 }
 
@@ -720,6 +782,8 @@
 
 
 /* todo Footer  */
+
+
 
 /* todo responsive  */
 
