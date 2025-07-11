@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
     --color-hitam:#1a1a1a;
+    --shadow:#1a1a1a6a;
     --color-putih: #ffff;
     --color-ungu: #8685ef;
     --text-color: #ffff;
@@ -34,7 +36,7 @@
 }
 
 .navbar .navbar-box .logo {
-    background-color: var(--color-putih);
+    background-color: var(--text-color-opacity);
     width: 35px;
     height: 35px;
     border-radius: 100px;
@@ -44,6 +46,7 @@
 
 .navbar .navbar-box .logo p {
     font-weight: bold;
+    color: var(--background-merah);
 
 }
 
@@ -71,10 +74,11 @@
 .navbar .navbar-box .social a {
     color: var(--text-color-opacity);
     text-decoration: none;
+    font-size: 16px;
 }
 
 .navbar .navbar-box .menu li a:hover,
-.navbar .navbar-box .social li a:hover {
+.navbar .navbar-box .social a:hover {
     color: var(--text-color);
 }
 
@@ -119,7 +123,8 @@
     width: 200px;
     margin-bottom: 20px;
     border-radius: 100px;
-    margin-top: 150px;      
+    margin-top: 150px;
+    box-shadow: 3px 3px var(--shadow);      
 }
 
 .header .header-box h1 {
@@ -371,6 +376,7 @@
 .division .division-box .photography-box .box img {
     width: 100%;
     margin-bottom: 5px;
+    box-shadow: 5px 5px var(--shadow);
 }
 
 .division .division-box .photography-box .box p {
@@ -401,6 +407,9 @@
 .division .division-box .film-box .box img {
     width: 100%;
     margin-bottom: 5px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 3px 3px var(--shadow);
 }
 
 .division .division-box .film-box .box p {
@@ -429,14 +438,13 @@
 
 .division .division-box .design-box .box img {
     width: 100%;
-    position: relative;
     margin-bottom: 5px;
     object-fit: cover;
     object-position: center;
+    box-shadow: 3px 3px var(--shadow);
 }
 
 .division .division-box .design-box .box p {
-    /* font-size: 14px; */
     font-weight: 300;
     color: var(--text-color);
     text-align: justify;
@@ -466,6 +474,7 @@
     margin-bottom: 5px;
     object-fit: cover;
     object-position: center;
+    box-shadow: 3px 3px var(--shadow);
 }
 
 .division .division-box .programming-box .box p {
@@ -637,6 +646,7 @@
     overflow: hidden;
     position: relative;
     padding: 0 5px;
+    scroll-behavior: auto;
     
 }
 
@@ -650,47 +660,8 @@
     vertical-align: middle;
     width: 100%;
     object-fit: cover;
+    box-shadow: 0 5px var(--shadow);
 }
-
-.scroll-up .inner {
-    animation: scrollUp 30s linear infinite;
-}
-.scroll-down .inner {
-  animation: scrollDown 30s linear infinite;
-}
-
-
-
-
-/* ? scroll  */
-
-#kol1 {
-    animation-name: scrollUp 20s linear infinite;
-}
-
-#kol2 {
-    animation-name: scrollDown 20s linear infinite;
-}
-
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
-}
-@keyframes scrollDown {
-    0% {
-        transform: translateY(-50%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-
-/* ? scroll  */
 
 .join .join-box .box:nth-child(2) {
     text-align: center;

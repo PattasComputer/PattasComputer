@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 });
+//card slider
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle("is-active");
@@ -114,3 +115,39 @@ function changeSlide(n) {
 };
 
 var timer = setInterval(changeSlide, interval);
+
+
+//scroll photo album
+
+document.querySelectorAll('.scroll-column').forEach(column => {
+    const direction = column.dataset.direction;
+    const inner = column.querySelector('.inner');
+
+
+    //clone isi inner 
+    const clone = inner.cloneNode(true);
+    column.appendChild(clone);
+
+    let scrollAmount = 0;
+
+    function scroll() {
+        const scrollSpeed = 0.75; //kecepatan scroll 
+
+        scrollAmount += scrollSpeed;
+        if (scrollAmount >= inner.scrollHeight) {
+            scrollAmount = 0;
+        }
+
+        if (direction === 'up') {
+            column.scrollTop = scrollAmount;
+        } else {
+            column.scrollTop = inner.scrollHeight - scrollAmount;
+        }
+
+        requestAnimationFrame(scroll);
+    }
+    //mulai animasi scroll
+    requestAnimationFrame(scroll);
+});
+
+//scroll photo album
