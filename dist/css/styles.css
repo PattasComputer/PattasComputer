@@ -708,6 +708,17 @@
 
 .footer .footer-box .box:nth-child(1) p {
     color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.footer .footer-box .box:nth-child(1) .location {
+   display: flex;
+   gap: 10px;
+}
+
+.footer .footer-box .box:nth-child(1) .location i {
+    color: var(--text-color);
+    font-size: 25px;
 }
 
 .footer .footer-box .box:nth-child(2) {
